@@ -319,7 +319,7 @@ export default {
             `Name or company name: ${PENDING}`,
             `Tax ID: ${PENDING}`,
             `Registered address: ${PENDING}`,
-            `Contact email: ${PENDING}`,
+            'Contact email: nodaradigital@gmail.com',
             `Company registration details, if applicable: ${PENDING}`,
           ],
         },
@@ -357,7 +357,7 @@ export default {
             `Identity: ${PENDING}`,
             `Tax ID: ${PENDING}`,
             `Address: ${PENDING}`,
-            `Email: ${PENDING}`,
+            'Email: nodaradigital@gmail.com',
           ],
         },
         {

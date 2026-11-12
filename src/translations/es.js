@@ -323,7 +323,7 @@ export default {
             `Nombre o razón social: ${PENDING}`,
             `NIF / CIF: ${PENDING}`,
             `Domicilio: ${PENDING}`,
-            `Correo electrónico de contacto: ${PENDING}`,
+            'Correo electrónico de contacto: nodaradigital@gmail.com',
             `Datos de inscripción registral, si procede: ${PENDING}`,
           ],
         },
@@ -361,7 +361,7 @@ export default {
             `Identidad: ${PENDING}`,
             `NIF / CIF: ${PENDING}`,
             `Domicilio: ${PENDING}`,
-            `Correo electrónico: ${PENDING}`,
+            'Correo electrónico: nodaradigital@gmail.com',
           ],
         },
         {

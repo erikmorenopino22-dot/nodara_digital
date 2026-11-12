@@ -8,8 +8,8 @@ export const site = {
   // Se usa en canonical, hreflang, Open Graph, sitemap.xml y robots.txt.
   url: 'https://nodara-digital.vercel.app',
 
-  // PENDIENTE: correo de contacto público. Si se deja vacío no se muestra.
-  email: '',
+  // Correo de contacto público (footer, contacto y páginas legales).
+  email: 'nodaradigital@gmail.com',
 
   defaultLang: 'es',
   languages: ['es', 'en'],
