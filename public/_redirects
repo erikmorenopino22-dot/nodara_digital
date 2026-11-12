@@ -1,0 +1,2 @@
+# Netlify / Cloudflare Pages: cualquier ruta sin archivo propio carga la app.
+/*    /index.html   200

@@ -1,0 +1,20 @@
+// Datos generales del sitio.
+// Todo lo marcado como PENDIENTE debe completarse antes de publicar.
+
+export const site = {
+  name: 'Nodara Digital',
+
+  // Dominio gratuito de Vercel (sin barra final). Cámbialo si conectas un dominio propio.
+  // Se usa en canonical, hreflang, Open Graph, sitemap.xml y robots.txt.
+  url: 'https://nodara-digital.vercel.app',
+
+  // PENDIENTE: correo de contacto público. Si se deja vacío no se muestra.
+  email: '',
+
+  defaultLang: 'es',
+  languages: ['es', 'en'],
+  ogImage: '/og-image.png',
+}
+
+// Endpoint del formulario (ver .env.example). Vacío = formulario no conectado.
+export const formEndpoint = import.meta.env?.VITE_FORM_ENDPOINT ?? ''

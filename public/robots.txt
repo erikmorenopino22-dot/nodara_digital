@@ -1,0 +1,4 @@
+# Versión para desarrollo. Al ejecutar "npm run build" se sustituye por otra
+# que incluye la URL del sitemap con el dominio de src/config/site.js.
+User-agent: *
+Allow: /

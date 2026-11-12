@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+/* Tipografías servidas desde el propio sitio (sin peticiones a Google Fonts). */
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/inter';
+
+/* Tema de Tailwind v4: cada variable genera sus utilidades
+   (bg-midnight, text-ice, font-display, etc.). */
+@theme {
+  --color-midnight: #101820;
+  --color-ice: #a7d8ff;
+  --color-cloud: #f5f7fa;
+  --color-slate: #526273;
+
+  /* Derivados de la paleta para superficies, líneas y texto secundario. */
+  --color-midnight-soft: #18232e;
+  --color-mist: #a3b3c2; /* texto secundario sobre Midnight */
+  --color-line: #dfe5eb; /* líneas sobre fondos claros */
+  --color-ice-deep: #1f5f8f; /* acento legible sobre fondos claros */
+
+  --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-midnight antialiased;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Deja espacio para el header fijo al saltar a una sección. */
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ice-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .on-dark :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--color-ice);
+  }
+
+  ::selection {
+    background: var(--color-ice);
+    color: var(--color-midnight);
+  }
+}
+
+@layer components {
+  /* Ancho y márgenes laterales comunes a toda la web. */
+  .container-page {
+    @apply mx-auto w-full max-w-[82rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-28 lg:py-36;
+  }
+
+  .heading-xl {
+    @apply font-display text-[2rem] leading-[1.08] font-medium tracking-[-0.025em] sm:text-5xl lg:text-[3.5rem];
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-slate;
+  }
+}
+
+/* Latido del nodo activo del hero. */
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+.node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pulse 3.2s ease-out infinite;
+}
+
+/* Cursor del editor de código. */
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+/* Cinta de tecnologías: se desplaza la mitad de su ancho (una copia). */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Señales que recorren las conexiones del gráfico de automatización. */
+@keyframes flow {
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+
+.flow-line {
+  stroke-dasharray: 6 134;
+  animation: flow 2.8s linear infinite;
+}
+
+/* Giro lento del anillo punteado. */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: spin-slow 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret,
+  .marquee-track,
+  .flow-line,
+  .spin-slow {
+    animation: none;
+  }
+
+  .flow-line {
+    display: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .node-pulse {
+    animation: none;
+    opacity: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
