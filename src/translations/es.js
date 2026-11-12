@@ -381,7 +381,7 @@ export default {
           heading: 'Conservación y destinatarios',
           paragraphs: [
             `Plazo de conservación de los datos: ${PENDING}`,
-            `Proveedores que tratan datos por cuenta del responsable (por ejemplo, alojamiento web o servicio de formularios): ${PENDING}`,
+            'Proveedores que tratan datos por cuenta del responsable: Vercel Inc. (alojamiento de la web) y Formspree (recepción de los mensajes del formulario de contacto). Ambos tienen su sede en Estados Unidos, por lo que los datos pueden tratarse fuera del Espacio Económico Europeo.',
           ],
         },
         {

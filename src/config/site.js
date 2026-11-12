@@ -16,5 +16,8 @@ export const site = {
   ogImage: '/og-image.png',
 }
 
-// Endpoint del formulario (ver .env.example). Vacío = formulario no conectado.
-export const formEndpoint = import.meta.env?.VITE_FORM_ENDPOINT ?? ''
+// Endpoint del formulario de contacto (Formspree). Las solicitudes llegan
+// al correo de la cuenta de Formspree. La variable VITE_FORM_ENDPOINT, si
+// existe, tiene prioridad (ver .env.example). Esta URL no es secreta: el
+// navegador del visitante siempre la ve al enviar el formulario.
+export const formEndpoint = import.meta.env?.VITE_FORM_ENDPOINT || 'https://formspree.io/f/xyewzwde'

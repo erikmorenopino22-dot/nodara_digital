@@ -377,7 +377,7 @@ export default {
           heading: 'Retention and recipients',
           paragraphs: [
             `Data retention period: ${PENDING}`,
-            `Providers that process data on behalf of the controller (for example, web hosting or a form service): ${PENDING}`,
+            'Providers that process data on behalf of the controller: Vercel Inc. (website hosting) and Formspree (receiving contact form messages). Both are based in the United States, so data may be processed outside the European Economic Area.',
           ],
         },
         {
